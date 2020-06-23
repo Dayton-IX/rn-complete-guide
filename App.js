@@ -14,7 +14,7 @@ export default function App() {
   	return (
 		<View style={styles.screen}>
 			<GoalInput pressHandler={addGoalHandler} />
-			<FlatList data={courseGoals} renderItem={itemData => <GoalItem title={itemData.item.value} />} />
+			<FlatList data={courseGoals} renderItem={itemData => <GoalItem title={itemData.item.value} onDelete={console.log("Goal Touched")}/>} />
 		</View>
   	);
 }
